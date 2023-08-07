@@ -1,0 +1,636 @@
+@font-face {
+    font-family: 'playstation';
+    src: url(Font/playstation/zrnic___.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    scroll-behavior: smooth;
+    background-color: #000;
+}
+
+nav {
+    font-family: 'playstation', sans-serif;
+}
+
+nav,
+nav a {
+    font-size: 1.5rem;
+}
+
+
+header {
+    height: 100vh;
+    padding: 25vh 0;
+    color: #000;
+    background: url(https://img.freepik.com/free-vector/topographic-pattern-design-with-shadows_1017-14333.jpg?w=1060&t=st=1691373052~exp=1691373652~hmac=04e67716f700a2e2bb307dc4760a4be70ab0d798f71e6e3035ab5cfbe15524c7) no-repeat center;
+    background-size: cover;
+}
+
+.container-header {
+    display: flex;
+    flex-direction: row;
+    gap: 45px;
+    align-items: center;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.container-header h1 {
+    font-size: 3rem;
+    background-color: rgba(255, 255, 255, 0.871);
+}
+
+.container-header p {
+    font-size: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.871);
+}
+
+.container-header:hover {
+    animation: animeHeader 1.5s forwards;
+    background-color: #ffffffbd;
+}
+
+
+@media screen and (min-width : 1000px) {
+    @keyframes animeHeader {
+        to {
+            transform: rotateX(-40deg) rotateY(-10deg) rotateZ(-5deg);
+            box-shadow: -30px 50px 20px rgba(0, 0, 0, 0.779);
+            text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.559);
+        }
+    }
+
+    header button {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width : 999px) and (min-width : 620px) {
+    .container-header h1 {
+        font-size: 2rem;
+    }
+
+    .container-header p {
+        font-size: 1rem;
+    }
+
+    header img {
+        width: 150px;
+    }
+
+    header button {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width : 619px) {
+    .container-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .container-header p {
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+    header img {
+        width: 150px;
+    }
+
+    header button {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width : 700px) {
+    .container-header {
+
+        flex-direction: column;
+    }
+}
+
+header button {
+    padding: 0px 15px;
+    border: none;
+    font-family: 'playstation', sans-serif;
+    letter-spacing: 2px;
+    padding-top: 5px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+header button::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    left: 0px;
+    top: -100px;
+    background-color: #191919;
+    z-index: -1;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+header button:hover::after {
+    top: -15px;
+    transition-duration: 1s;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+header button:hover {
+    color: #fad52b;
+    transition-duration: 0.5s;
+    animation: animeHeader-button 1s forwards;
+}
+
+header button:active {
+    animation: none;
+}
+
+@keyframes animeHeader-button {
+    to {
+        box-shadow: -10px 15px 10px rgba(72, 68, 68, 0.779);
+    }
+}
+
+
+/*            azertyuiopqsdfghjklmwxcvbnnbvcxwmlkjhgfdsqpoiuytreza            */
+
+
+.section-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 50px 0px;
+}
+
+.feature-card-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+
+
+
+.feature-box {
+    position: relative;
+    height: max-content;
+    width: max-content;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 500px;
+}
+
+.feature-card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.feature-card h1 {
+    font-family: 'playstation';
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.feature-card img {
+    width: 50px;
+    height: auto;
+}
+
+.feature-card:nth-child(2) img {
+    height: 50px;
+    width: 75px;
+}
+
+.feature-card:nth-child(3) img {
+    width: 40px;
+}
+
+@media screen and (max-width : 600px) {
+    .feature-card-container {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width : 430px) {
+    .section-feature h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+
+}
+
+.section-bg {
+    background: url(https://images7.alphacoders.com/111/1117123.png) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 50vw;
+}
+
+
+/* PRICE PRICE PRICE PRICE PRICE PRICE PRICE PRICE PRICE PRICE PRICE PRICE PRICE*/
+.container-plan {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.section-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 0;
+}
+
+.section-price>h1 {
+    font-family: 'playstation';
+    font-size: 5.5rem;
+}
+
+.benefit img {
+    width: 35px;
+}
+
+.benefit {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.div-plan li {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.div-plan h1 {
+    background-color: #fad52b;
+    display: inline-block;
+    padding: 5px 25px;
+    border-radius: 5px;
+}
+
+.container-plan>div {
+    background-color: #ffffff;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 5px;
+}
+
+.div-plan h2 {
+    color: #006db7;
+}
+
+.div-plan ol {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0;
+}
+
+.div-plan {
+    margin: 0px 5px;
+    width: 30vw;
+}
+
+@media screen and (max-width:930px) {
+    .container-plan {
+        flex-direction: column;
+    }
+
+    .div-plan {
+        width: 75vw;
+    }
+
+    .section-price>h1 {
+        font-size: 3rem;
+    }
+}
+
+.section-price h1,
+.container-btn-price {
+    text-align: center;
+}
+
+.container-btn-price {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-price {
+    width: 125px;
+    padding: 5px;
+    position: relative;
+    font-family: 'playstation';
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    background: none;
+    border: none;
+}
+
+.btn-price::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+}
+
+.btn-price:hover::before {
+    border-top: 2px solid;
+    border-right: 2px solid;
+    border-top-color: rgb(255, 0, 37);
+    border-right-color: rgb(250, 213, 43);
+    animation: border-btn-top 1.5s infinite alternate;
+}
+
+@keyframes border-btn-top {
+    0% {
+        width: 0px;
+        height: 0px;
+    }
+
+    25% {
+        width: 100%;
+        height: 0px;
+    }
+
+    50% {
+        width: 100%;
+        height: 100%;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.btn-price::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+}
+
+.btn-price:hover::after {
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    border-bottom-color: rgb(0, 172, 160);
+    border-left-color: rgb(0, 109, 183);
+    animation: border-btn-bottom 1.5s infinite alternate;
+}
+
+.btn-price:hover {
+    animation: shadow-btn infinite alternate 0.5s;
+}
+
+@keyframes border-btn-bottom {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+    }
+
+    50% {
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+    }
+
+    50.1% {
+        opacity: 1;
+    }
+
+    75% {
+        width: 100%;
+        height: 0px;
+        opacity: 1;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes shadow-btn {
+    to {
+        box-shadow: 0px 0px 30px #006db7;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .container-btn-price button {
+        width: 70px;
+        font-size: 15px;
+    }
+}
+
+.section-clients>div {
+    padding: 50px 0px;
+}
+
+.why {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 50px 15px;
+}
+
+.reason>div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #19191934;
+    border-radius: 10px;
+    padding-top: 15px;
+}
+
+.reason>div div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.reason>div h1 {
+    font-size: 1.5rem;
+}
+
+.reason img {
+    width: 60px;
+}
+
+.section-newsletter {
+    display: flex;
+    justify-content: center;
+    padding: 50px 10px;
+}
+
+.newsletter {
+    border: solid 1px;
+    padding: 10px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.newsletter h1 {
+    text-align: center;
+}
+
+@media screen and (max-width:600px) {
+    .newsletter {
+        padding: 10px 25px;
+    }
+}
+
+.input-newsletter input {
+    padding: 5px;
+    outline: none;
+}
+
+.condition-newsletter {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.condition-newsletter p {
+    margin: 0;
+}
+
+.profil-pic-user {
+    border-radius: 300px;
+}
+
+@media screen and (max-width : 430px) {
+    .user-comment {
+        font-size: 1rem;
+    }
+
+    .socialmedia img {
+        width: 20px;
+        fill: white;
+    }
+
+    .socialmedia {
+        padding: 5px;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width : 431px) {
+    .socialmedia img {
+        width: 30px;
+        fill: white;
+    }
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 25px 0px;
+}
+
+.socialmedia {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 15px 30px;
+    border-radius: 25px;
+}
+
+.product ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.product a {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+
+.section-game {
+    padding: 75px 0px 150px 100px;
+    position: relative;
+}
+
+.game {
+    height: 75vh;
+    background: url(https://images6.alphacoders.com/130/1309409.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.trailer iframe {
+    border-radius: 25px;
+    position: absolute;
+    top: 65%;
+    left: 2.5%;
+}
+
+.trailer iframe:hover {
+    transform: scale(1.05);
+    transition-duration: 0.5s;
+}
+
+
+@media screen and (max-width: 660px) {
+    .trailer iframe {
+        width: 75vw;
+        height: 50vw;
+    }
+
+}
+
+
+
+
+.fbShadow {
+    box-shadow: 0px 0px 20px #ff0025;
+}
+
+.twitterShadow {
+    box-shadow: 0px 0px 20px #fad52b;
+}
+
+.instaShadow {
+    box-shadow: 0px 0px 20px #006db7;
+}
+
+.ytbShadow {
+    box-shadow: 0px 0px 20px #0345ca;
+}
